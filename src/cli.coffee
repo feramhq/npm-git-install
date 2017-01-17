@@ -9,13 +9,14 @@
 cli         = require 'commander'
 path        = require 'path'
 fs          = require 'fs'
+packageData = require '../package.json'
 
 cwd         = process.cwd()
 
 # Command line options
 # See below for sub-commands definitions
 cli
-  .version '0.0.0' # TODO: Read from package.json
+  .version packageData.version
   .description """
     A utility to properly install npm git dependencies.
   """

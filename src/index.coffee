@@ -54,7 +54,7 @@ reinstall = (options = {}, pkg) ->
         exec cmd, { cwd: tmp, stdio }
 
       .then ->
-        cmd = 'npm install'
+        cmd = 'npm whoami && npm install'
         if verbose then console.log "executing `#{cmd}` in `#{tmp}`"
 
         exec cmd, { cwd: tmp, stdio }
@@ -83,7 +83,7 @@ reinstall = (options = {}, pkg) ->
         }
 
       .then (metadata) ->
-        cmd = "npm install #{tmp}"
+        cmd = "npm whoami && npm install #{tmp}"
         if verbose then console.log "executing #{cmd}"
 
         exec cmd, { stdio }

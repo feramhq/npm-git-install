@@ -11,7 +11,7 @@ fs          = require 'fs'
 # Helpful promises
 exec = (cmd, options) -> new Promise (resolve, reject) ->
   [ cmd, args... ] = cmd.split ' '
-  args.push 'shell'
+  options.shell = true
   child = cp.spawn cmd, args, options
   child.on 'close', (code) ->
     if code is 0 then resolve code

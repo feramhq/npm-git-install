@@ -1,6 +1,6 @@
 {
   "name": "@feram/npm-git-install",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Clones and (re)installs packages from remote git repos",
   "main": "build/index.js",
   "bin": {
